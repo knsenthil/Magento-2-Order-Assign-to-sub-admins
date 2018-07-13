@@ -1,0 +1,19 @@
+<form id="send-mail-form-<%- customerid %>" method="get" enctype="multipart/form-data" action="<%- formaction %>">
+	<div class="modal-body">
+		<div class="bootbox-body">
+			<input name="form_key" type="hidden" value="<%- formkey %>" />
+			<% for(var value in admins) {  %>
+				<input type="checkbox" name="sub-admin[]" value="<%- admins[value]["user_id"] %>"  <%- admins[value]["checked"] %> /><%- admins[value]["username"] %>
+			<% }  %>
+			<input type="hidden" name="entity_id" value="<%- customerid %>">    
+		</div>
+	</div>
+	<div class="modal-footer">
+		<span class="error"></span>
+		<button type="reset" class="btn btn-default"><span><%- cancellabel %></span></button>
+		<button type="submit" class="btn btn-primary"><span><%- submitlabel %></span></button>
+		<span class="clear"></span>
+	</div>
+
+</form>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+	<listingToolbar name="listing_top">
+	</listingToolbar>
+	<columns name="sales_order_shipment_columns">
+		<column name="vendor_name" class="Picturesalon\Assignorder\Ui\Component\Listing\Columns\Assignpopup">
+			<argument name="data" xsi:type="array">
+				<item name="options" xsi:type="object">Picturesalon\Assignorder\Ui\Component\Listing\Columns\Subadmins</item>
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">select</item>
+					<item name="label" xsi:type="string" translate="true">Assigned To</item>
+					<item name="vendor_name" xsi:type="string">true</item>
+					<item name="dataType" xsi:type="string">select</item>
+				</item>
+			</argument>
+		</column>
+	</columns>
+</listing>
